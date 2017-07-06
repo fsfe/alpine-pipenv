@@ -3,9 +3,10 @@ pipeline:
     secrets: [ docker_username, docker_password ]
     image: docker:stable-dind
     commands:
-        - apk add --update git
-        - docker info
         - docker build -t ams-testimage .
         - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
         - docker tag ams-testimage fsfe/ams-testimage
         - docker push fsfe/ams-testimage
+services:
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
