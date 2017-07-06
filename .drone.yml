@@ -7,5 +7,5 @@ pipeline:
         - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
         - docker tag ams-testimage fsfe/ams-testimage
         - docker push fsfe/ams-testimage
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
