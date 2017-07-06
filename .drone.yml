@@ -3,7 +3,7 @@ pipeline:
     secrets: [ docker_username, docker_password ]
     image: docker:stable-dind
     commands:
-        - apk add git
+        - apk add --update git
         - docker build -t ams-testimage https://git.fsfe.org/fsfe-ams/ams-testimage.git
         - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
         - docker tag ams-testimage fsfe/ams-testimage
