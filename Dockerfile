@@ -1,9 +1,10 @@
-FROM debian:latest
+# =============================================================================
+# Build instructions for the Docker container
+# =============================================================================
 
-MAINTAINER Jonas Oberg <jonas@fsfe.org>
+FROM alpine:3.9
 
-RUN apt-get update
-RUN apt-get install -y build-essential
-RUN apt-get install -y python3 libsasl2-dev python3-dev libldap2-dev libssl-dev python3-pip
-RUN apt-get install -y git
-RUN pip3 install pipenv
+MAINTAINER Free Software Foundation Europe <system-hackers@lists.fsfe.org>
+
+RUN apk add --no-cache python3
+RUN pip install pipenv
