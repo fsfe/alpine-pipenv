@@ -7,4 +7,4 @@ FROM alpine:3.9
 MAINTAINER Free Software Foundation Europe <system-hackers@lists.fsfe.org>
 
 RUN apk add --no-cache python3 make
-RUN pip3 install pipenv
+RUN pip3 install --no-cache-dir pipenv
