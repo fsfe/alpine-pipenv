@@ -4,12 +4,9 @@
 
 pipeline:
   build:
-#   secrets: [ docker_username, docker_password ]
     image: docker:stable-dind
     commands:
       - docker build -t alpine-pipenv .
       - docker tag alpine-pipenv fsfe/alpine-pipenv
-#     - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
-#     - docker push fsfe/alpine-pipenv
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
