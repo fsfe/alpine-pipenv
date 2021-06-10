@@ -6,6 +6,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # Docker Pipenv
 
+[![REUSE status](https://api.reuse.software/badge/git.fsfe.org/fsfe-system-hackers/docker-pipenv)](https://api.reuse.software/info/git.fsfe.org/fsfe-system-hackers/docker-pipenv)
+
 This is a slim Docker image with Python and Pipenv preinstalled. It serves as
 a base for other Docker images with Python applications.
 
