@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2021 Free Software Foundation Europe <https://fsfe.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+FROM alpine:3.9
+
+MAINTAINER Free Software Foundation Europe <system-hackers@lists.fsfe.org>
+
+RUN apk add --no-cache python3
+RUN pip3 install --no-cache-dir pipenv
